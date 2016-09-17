@@ -1,0 +1,24 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+
+
+.#{$css-prefix}btn--primary{
+  @include button-size($base-padding,$base-padding,$base-font-size,null,$base-border-radius);
+}
+
+.#{$css-prefix}btn--xsmall{
+  @include button-size($xsmall-padding,$xsmall-padding,$xsmall-font,null,$base-border-radius);
+}
+
+.primary-button {
+  @include button-variant($base-white, $primary-color, $primary-color);
+}
+
+.dangerous-button {
+  @include button-variant($base-white, $dangerous-color, $dangerous-color);
+}
+
+.success-button {
+  @include button-variant($base-white, $success-color, $success-color);
+}

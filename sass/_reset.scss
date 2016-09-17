@@ -1,0 +1,68 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, a, em, img, strike,
+strong, sub, sup, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label,
+legend, canvas, figure, figcaption, footer, header, nav, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+img,
+object {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+strong {
+  font-weight: bold;
+}
+
+label,
+input[type="file"],
+button {
+  cursor: pointer;
+}
+
+a,
+a:visited {
+  text-decoration: underline;
+  outline: 0;
+}
+a:hover,
+a:focus {
+
+}
+
+button {
+  border: none;
+  outline: none;
+}

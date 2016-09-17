@@ -1,0 +1,40 @@
+/// CSS Prefix
+/// Will prefix all CSS classes
+///
+/// @example scss Compile without prefix
+///  $css-prefix: '';
+///
+/// @example scss Use in a class name
+///  .#{$css-prefix}foo { ... } // outputs .slds-foo { ... }
+///
+$css-prefix: 'ccf-' !default;
+
+/// Reset wrapping class
+/// @example scss
+///  #{$reset-wrapping-class} .foo { ... } // outputs .slds .foo { ... }
+///
+$reset-wrapping-class: '.ccf' !default;
+
+$base-font-size:13px;
+
+$xsmall-font:12px;
+
+$base-padding: 10px;
+
+$xsmall-padding: 5px;
+
+$border-radius: 50%;
+
+$base-border-radius: 2px;
+
+$primary-color: #5CC2F2; //blue
+
+$secondary-color: #8BDBF5; //light blue
+
+$dangerous-color: #F95959; //red
+
+$information-color: #FBFFA3; //dark yellow
+
+$success-color: #66D37E; //green
+
+$base-white: #fff;

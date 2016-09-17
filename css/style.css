@@ -1,0 +1,223 @@
+/*
+Theme Name:
+Theme URI:
+Version: 1.0
+Author: joemon
+Author URI:
+*/
+/*
+   Table of Contents
+   =============================================================================
+	0 Reset Stylesheet
+
+
+   =============================================================================
+*/
+/* =============================================================================
+- Reset Stylesheet
+============================================================================= */
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+html {
+  overflow-y: scroll; }
+
+html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, a, em, img, strike,
+strong, sub, sup, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label,
+legend, canvas, figure, figcaption, footer, header, nav, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  font: inherit;
+  vertical-align: baseline; }
+
+img,
+object {
+  max-width: 100%; }
+
+ul {
+  list-style: none; }
+
+input,
+select {
+  vertical-align: middle; }
+
+input[type="radio"] {
+  vertical-align: text-bottom; }
+
+input[type="checkbox"] {
+  vertical-align: bottom; }
+
+strong {
+  font-weight: bold; }
+
+label,
+input[type="file"],
+button {
+  cursor: pointer; }
+
+a,
+a:visited {
+  text-decoration: underline;
+  outline: 0; }
+
+button {
+  border: none;
+  outline: none; }
+
+/* =============================================================================
+- Base
+============================================================================= */
+/* =============================================================================
+- Typography
+============================================================================= */
+/* =============================================================================
+- Form
+============================================================================= */
+/* =============================================================================
+- Form
+============================================================================= */
+/*- Form
+============================================================================= */
+.ccf-btn--primary {
+  padding: 10px 10px;
+  font-size: 13px;
+  border-radius: 2px; }
+
+.ccf-btn--xsmall {
+  padding: 5px 5px;
+  font-size: 12px;
+  border-radius: 2px; }
+
+.primary-button {
+  color: #fff;
+  background-color: #5CC2F2;
+  border-color: #5CC2F2;
+  transition: all .2s ease; }
+  .primary-button:hover, .primary-button:focus, .primary-button:active {
+    color: #fff;
+    background-color: #2db0ee;
+    border-color: #36b4ef; }
+  .primary-button[disabled], .primary-button[disabled]:hover, .primary-button[disabled]:focus, .primary-button[disabled]:active,
+  fieldset[disabled] .primary-button,
+  fieldset[disabled] .primary-button:hover,
+  fieldset[disabled] .primary-button:focus,
+  fieldset[disabled] .primary-button:active {
+    background-color: #bae5fa;
+    border-color: #a8def8; }
+
+.dangerous-button {
+  color: #fff;
+  background-color: #F95959;
+  border-color: #F95959;
+  transition: all .2s ease; }
+  .dangerous-button:hover, .dangerous-button:focus, .dangerous-button:active {
+    color: #fff;
+    background-color: #f72828;
+    border-color: #f83232; }
+  .dangerous-button[disabled], .dangerous-button[disabled]:hover, .dangerous-button[disabled]:focus, .dangerous-button[disabled]:active,
+  fieldset[disabled] .dangerous-button,
+  fieldset[disabled] .dangerous-button:hover,
+  fieldset[disabled] .dangerous-button:focus,
+  fieldset[disabled] .dangerous-button:active {
+    background-color: #fdbbbb;
+    border-color: #fca8a8; }
+
+.success-button {
+  color: #fff;
+  background-color: #66D37E;
+  border-color: #66D37E;
+  transition: all .2s ease; }
+  .success-button:hover, .success-button:focus, .success-button:active {
+    color: #fff;
+    background-color: #3ec85d;
+    border-color: #46ca63; }
+  .success-button[disabled], .success-button[disabled]:hover, .success-button[disabled]:focus, .success-button[disabled]:active,
+  fieldset[disabled] .success-button,
+  fieldset[disabled] .success-button:hover,
+  fieldset[disabled] .success-button:focus,
+  fieldset[disabled] .success-button:active {
+    background-color: #b5eac1;
+    border-color: #a5e5b3; }
+
+/* =============================================================================
+- Utilities
+============================================================================= */
+.clear-fix:before, .clear-fix:after {
+  content: " ";
+  display: table; }
+
+.clear-fix:after {
+  clear: both; }
+
+.no-margin {
+  margin: 0; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.float-none {
+  float: none; }
+
+.horizontal-center {
+  margin-left: auto;
+  margin-right: auto; }
+
+.block {
+  display: block; }
+
+.inline {
+  display: inline; }
+
+.show {
+  display: block; }
+
+.hide {
+  display: none; }
+
+.full {
+  width: 100%; }
+
+img.full {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  width: auto; }
+
+/* =============================================================================
+- avatar Stylesheet
+============================================================================= */
+.ccf-avatar {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%; }
+  .ccf-avatar--small {
+    width: 16px;
+    height: auto; }
+  .ccf-avatar--medium {
+    width: 24px;
+    height: auto; }
+  .ccf-avatar--large {
+    width: 30px;
+    height: auto; }
+  .ccf-avatar--xlarge {
+    width: 100px;
+    height: auto; }
+
+/* =============================================================================
+- Media Queries
+============================================================================= */
+/* =============================================================================
+- Helper styles for the main styles
+============================================================================= */
+/* =============================================================================
+- Conditional IE class
+============================================================================= */
