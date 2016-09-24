@@ -132,8 +132,9 @@
   width: 100px;
   height: auto;
 }
+//------------------------------------------
 
-/// Button Sizes
+/// Buttons + Sizes
 
 /// @param {Number} $padding-vertical `padding`
 /// @param {Number} $padding-horizontal `padding`
@@ -214,3 +215,133 @@
 		}
 	}
 }
+
+//---------------------------------------------------------
+
+// Bem syntax
+
+/// @link https://medium.com/@marcmintel/pushing-bem-to-the-next-level-with-sass-3-4-5239d2371321
+
+$elementSeparator: '__';
+
+$modifierSeparator: '--';
+
+
+@function containsModifier($selector) {
+    $selector: selectorToString($selector);
+    @if str-index($selector, $modifierSeparator) {
+        @return true;
+    } @else {
+        @return false;
+    }
+}
+
+
+@function selectorToString($selector) {
+    $selector: inspect($selector);
+    $selector: str-slice($selector, 2, -2);
+    @return $selector;
+}
+
+
+@function getBlock($selector) {
+    $selector: selectorToString($selector);
+    $modifierStart: str-index($selector, $modifierSeparator) - 1;
+    @return str-slice($selector, 0, $modifierStart);
+}
+
+
+@mixin b($block) {
+    .#{$block} {
+        @content;
+    }
+}
+
+@mixin e($element) {
+    $selector: &;
+    @if containsModifier($selector) {
+        $block: getBlock($selector);
+        @at-root {
+            #{$selector} {
+                #{$block+$elementSeparator+$element} {
+                    @content;
+                }
+            }
+        }
+    } @else {
+        @at-root {
+            #{$selector+$elementSeparator+$element} {
+                @content;
+            }
+        }
+    }
+}
+
+
+@mixin m($modifier) {
+    @at-root {
+        #{&}#{$modifierSeparator+$modifier} {
+            @content;
+        }
+    }
+}
+
+///  //SCSS
+///  @include b(card) {
+///     background: red;
+///     @include e(head){
+///         font-size: 14px;
+///
+///         @include m(large) {
+///             font-size: 18px;
+///         }
+///     };
+///  }
+///  //CSS
+///  .card {
+///      background: red;
+///  }
+///  .card__head {
+///     font-size: 14px;
+///  }
+///  .card__head--large {
+///     font-size: 18px;
+///  }
+
+//------------------------------------------------------------
+
+// Calc mixin
+
+
+/// //SCSS
+/// .calc{
+/// 	 @include calc(width,'100% - 20px');
+///	}
+/// //CSS
+/// .calc {
+///		width: calc(100% - 20px);
+///	}
+
+@mixin calc($prop, $val) {
+  #{$prop}: calc(#{$val});
+}
+
+// ---------------------------------------------------------------
+
+
+// Alert messges
+/// //SCSS
+///
+/// .alert{
+/// 	@include alert-variant(#f36,darken(#f36,5%),#333);
+/// }
+
+
+@mixin alert-variant($background, $border, $text-color) {
+  background-color: $background;
+  border-color: $border;
+  color: $text-color;
+}
+
+
+// -----------------------------------------------------------------
